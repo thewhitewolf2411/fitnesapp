@@ -11,7 +11,7 @@ import res from '../../Res';
 import AuthScreen from '../../Screens/AuthScreen';
 import HomeScreen from '../../Screens/HomeScreen';
 import useAuth from '../../Hooks/useAuth';
-
+import BottomAppNavigator from './BottomAppNavigator';
 
 const Stack = createStackNavigator();
 
@@ -44,7 +44,7 @@ const AppNavigator = () => {
 
   return (
     <NavigationContainer>
-        {!!token ? <HomeScreen /> : <AuthStack />}
+        {!!token ? <BottomAppNavigator /> : <BottomAppNavigator />}
     </NavigationContainer>
   );
 
